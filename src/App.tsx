@@ -1,38 +1,44 @@
 import { useEffect } from 'react'
-import Plyr from 'plyr'
-import 'plyr/dist/plyr.css'
 import './App.css'
 import { pieces } from './data/pieces'
 
 function App() {
   useEffect(() => {
-    const players = Array.from(document.querySelectorAll<HTMLAudioElement>('.piece-audio')).map(
-      (audioElement) =>
-        new Plyr(audioElement, {
-          controls: ['play', 'progress', 'current-time', 'mute', 'volume']
-        })
-    )
+    const players = Array.from(document.querySelectorAll<HTMLAudioElement>('.piece-audio'))
+    const handlers = new Map<HTMLAudioElement, () => void>()
+
+    const handlePlay = (currentPlayer: HTMLAudioElement) => {
+      players.forEach((otherPlayer) => {
+        if (otherPlayer !== currentPlayer) {
+          otherPlayer.pause()
+        }
+      })
+    }
 
     players.forEach((player) => {
-      player.on('play', () => {
-        players.forEach((otherPlayer) => {
-          if (otherPlayer !== player) {
-            otherPlayer.pause()
-          }
-        })
-      })
+      const onPlay = () => {
+        handlePlay(player)
+      }
+
+      player.addEventListener('play', onPlay)
+      handlers.set(player, onPlay)
     })
 
     return () => {
-      players.forEach((player) => player.destroy())
+      players.forEach((player) => {
+        const handler = handlers.get(player)
+        if (handler) {
+          player.removeEventListener('play', handler)
+        }
+      })
     }
   }, [])
 
   return (
     <main className="poetry-page music-page">
       <header className="hero">
-        <p className="eyebrow">Cuaderno digital</p>
-        <h1>Honorato Rainbows</h1>
+        <p className="eyebrow">Cuaderno musical</p>
+        <h1>notumyama</h1>
         <p className="intro">Un feed sencillo de piezas sonoras, notas breves y escucha directa.</p>
       </header>
 
@@ -53,7 +59,7 @@ function App() {
         ))}
       </section>
 
-      <footer className="page-footer">Santander, piezas entre la bruma y la montana.</footer>
+      <footer className="page-footer">Santander, piezas entre la bruma y la montaña.</footer>
     </main>
   )
 }

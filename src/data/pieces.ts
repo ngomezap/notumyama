@@ -6,8 +6,9 @@ export type Piece = {
 
 export const pieces: Piece[] = [
   {
-    title: 'Pieza en desarrollo I',
-    description: 'Textura ambiental de prueba. Esta ficha sirve como placeholder hasta subir el audio final.'
+    title: 'Organic Flow 1015 (Remastered)',
+    description: 'Primera pieza de muestra publicada en el feed para validar reproduccion y estilo visual.',
+    audioUrl: '/audio/aberrantrealities-organic-flow-1015-remastered-485950.mp3'
   },
   {
     title: 'Pieza en desarrollo II',

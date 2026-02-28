@@ -1,8 +1,10 @@
 :root {
-  --paper: #f6f3ea;
-  --ink: #262421;
-  --soft-ink: #5f5a53;
-  --line: #d8d2c8;
+  --paper: #0d1117;
+  --ink: #e5e7eb;
+  --soft-ink: #9ca3af;
+  --line: #2b3440;
+  --card: rgba(16, 21, 29, 0.72);
+  --card-edge: rgba(64, 77, 92, 0.5);
 }
 
 #root {
@@ -13,8 +15,8 @@
   min-height: 100vh;
   padding: clamp(2rem, 4vw, 4rem) clamp(1.2rem, 4vw, 5rem);
   background:
-    radial-gradient(circle at 90% 0%, rgba(214, 202, 184, 0.4), transparent 40%),
-    radial-gradient(circle at 5% 80%, rgba(225, 216, 201, 0.45), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(72, 42, 28, 0.3), transparent 42%),
+    radial-gradient(circle at 5% 78%, rgba(25, 47, 64, 0.33), transparent 48%),
     var(--paper);
   color: var(--ink);
   font-family: 'Courier Prime', 'Courier New', Courier, monospace;
@@ -56,11 +58,11 @@ h1 {
 }
 
 .poem-card {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid var(--line);
+  background: var(--card);
+  border: 1px solid var(--card-edge);
   border-radius: 4px;
   padding: 1.2rem;
-  backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(1px);
 }
 
 h2 {
@@ -81,7 +83,7 @@ h2 {
 .piece-description {
   margin: 0 0 1rem;
   line-height: 1.65;
-  color: #3d3934;
+  color: #cbd5e1;
 }
 
 .pending-audio {
@@ -91,16 +93,8 @@ h2 {
   font-style: italic;
 }
 
-/* Small skin adaptation so Plyr blends with existing palette. */
-.music-page .plyr {
-  --plyr-color-main: #8c7760;
-  --plyr-audio-control-color: #3d3934;
-  --plyr-audio-control-background-hover: rgba(184, 173, 155, 0.22);
-  --plyr-audio-controls-background: rgba(255, 255, 255, 0.58);
-  --plyr-range-fill-background: #8c7760;
-  --plyr-menu-background: #fff;
-}
-
-.music-page .plyr--audio {
+.piece-audio {
+  display: block;
   max-width: 100%;
+  width: 100%;
 }
