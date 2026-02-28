@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mountain with padded segmented equalizer icon">
+  <rect width="64" height="64" rx="12" fill="#0d1117" />
+
+  <defs>
+    <clipPath id="outerMountain">
+      <path d="M8 50 21 34 27 26 33 33 38 29 45 36 56 50Z" />
+    </clipPath>
+    <clipPath id="innerMountain">
+      <path d="M11 49 22 35 27 28 33 35 38 31 44 37 53 49Z" />
+    </clipPath>
+    <linearGradient id="meter" x1="0" y1="48" x2="0" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="68%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+  </defs>
+
+  <path d="M8 50 21 34 27 26 33 33 38 29 45 36 56 50Z" fill="#e5e7eb" />
+
+  <g clip-path="url(#outerMountain)">
+    <g clip-path="url(#innerMountain)" fill="url(#meter)">
+      <g transform="translate(12 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /></g>
+      <g transform="translate(15 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /></g>
+      <g transform="translate(18 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /><rect x="0" y="33" width="2" height="2" /></g>
+      <g transform="translate(21 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /><rect x="0" y="33" width="2" height="2" /><rect x="0" y="30" width="2" height="2" /></g>
+      <g transform="translate(24 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /><rect x="0" y="33" width="2" height="2" /><rect x="0" y="30" width="2" height="2" /><rect x="0" y="27" width="2" height="2" /></g>
+      <g transform="translate(27 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /><rect x="0" y="33" width="2" height="2" /><rect x="0" y="30" width="2" height="2" /><rect x="0" y="27" width="2" height="2" /><rect x="0" y="24" width="2" height="2" /></g>
+      <g transform="translate(30 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /><rect x="0" y="33" width="2" height="2" /><rect x="0" y="30" width="2" height="2" /><rect x="0" y="27" width="2" height="2" /></g>
+      <g transform="translate(33 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /><rect x="0" y="33" width="2" height="2" /><rect x="0" y="30" width="2" height="2" /></g>
+      <g transform="translate(36 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /><rect x="0" y="33" width="2" height="2" /><rect x="0" y="30" width="2" height="2" /></g>
+      <g transform="translate(39 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /><rect x="0" y="33" width="2" height="2" /></g>
+      <g transform="translate(42 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /><rect x="0" y="36" width="2" height="2" /></g>
+      <g transform="translate(45 0)"><rect x="0" y="45" width="2" height="2" /><rect x="0" y="42" width="2" height="2" /><rect x="0" y="39" width="2" height="2" /></g>
+    </g>
+  </g>
+</svg>
